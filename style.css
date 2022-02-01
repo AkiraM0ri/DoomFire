@@ -1,0 +1,109 @@
+@import url('http://fonts.cdnfonts.com/css/doom-2016-left');
+
+body {
+    background-color: #fff;
+    font-family: 'Doom 2016 right', sans-serif;
+}
+h1 {
+    color: #000;
+    font-size: 5em;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    box-shadow: 2px 20px 30px 15px #000;
+}
+
+td {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+    text-align: center;
+    vertical-align: center;
+    font-family: monospace;
+    font-size: 18px;
+    position: relative;
+}
+
+.pixel-index {
+    font-size: 10px;
+    display: inline-block;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    color: #999;
+}
+
+td.pixel {
+    width: 15px;
+    height: 15px;
+    border: 0;
+}
+
+#fireCanvas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    visibility: hidden;
+    display: none;
+}
+
+.check {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 20px;
+    background-color: #000;
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 500ms;
+}
+
+input[type="checkbox"]:checked ~ .check{
+    background: #fff;
+}
+
+.check:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    background-color: #fff;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transition: 500ms;
+}
+
+input[type="checkbox"]:checked ~ .check:before {
+    transform: translate(-50px);
+}
+
+.check:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    background-color: #000;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transition: 500ms;
+    transform: translateX(50px);
+}
+
+input[type="checkbox"]:checked ~ .check:after {
+    transform: translate(0px);
+}
+
+#modoEscuro {
+    position: absolute;
+    top:90%;
+    left: 50%;
+}
